@@ -5,12 +5,6 @@ from django.db.models import Q
 
 from .models import Player
 
-from django.views import View
-from django.http import JsonResponse
-from django.db.models import Q
-
-from .models import Player
-
 class PlayerSearchView(View):
     def get(self, request):
         country = request.GET.get('country')
