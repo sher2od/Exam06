@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     # Local Apps
     'games.apps.GamesConfig',
     'player.apps.PlayerConfig',
+    'score.apps.ScoreConfig',
 ]
 
 MIDDLEWARE = [
