@@ -12,10 +12,9 @@ class LeaderboardView(View):
         if not game_id:
             return JsonResponse({"error": "game_id is required"}, status=400)
 
-        # O‘sha turnirdagi barcha score’lar
+
         scores = Score.objects.filter(game_id=game_id)
 
-        # Natijalar player bo‘yicha guruhlanadi
         leaderboard = {}
 
         for s in scores:

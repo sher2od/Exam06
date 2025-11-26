@@ -68,7 +68,7 @@ class GameDetailView(View):
         game = get_object_or_404(Game, pk=pk)
         data = json.loads(request.body)
         
-        # Fieldlarni to‘liq yangilash
+     
         game.title = data.get("title", game.title)
         game.location = data.get("location", game.location)
             

@@ -18,7 +18,7 @@ class PlayerView(View):
             if not nickname or not country:
                 return JsonResponse({"error": "nickname va country talab qilinadi"}, status=400)
 
-            # Unique nickname tekshirish
+         
             if Player.objects.filter(nickname=nickname).exists():
                 return JsonResponse({"error": "Bu nickname allaqachon mavjud"}, status=400)
 
@@ -53,7 +53,7 @@ class PlayerView(View):
                 "created_at": user.created_at.isoformat()
             })
 
-        # countni chiqarish
+   
 
         response_data = {
             "count":players.count(),
@@ -87,7 +87,7 @@ class PlayerDetailView(View):
         country = body.get("country")
         rating = body.get("rating")
 
-        # yangilash
+       
 
         if nickname:
             player_one.nickname = nickname
